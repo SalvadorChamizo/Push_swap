@@ -6,7 +6,7 @@
 /*   By: schamizo <schamizo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 18:11:57 by schamizo          #+#    #+#             */
-/*   Updated: 2024/02/22 18:25:35 by schamizo         ###   ########.fr       */
+/*   Updated: 2024/03/11 12:17:48 by schamizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	do_operator(t_stack **stack_a, t_stack **stack_b, char *str)
 		rrr_check(stack_a, stack_b);
 	else
 		error_exit();
+	free(str);
 }
 
 t_stack	*build_stack_checker(int argc, char **argv, t_stack *stack_a)
@@ -86,6 +87,8 @@ t_stack	*do_checker(t_stack **stack_a, t_stack **stack_b, char *operator)
 	}
 	else
 		ft_printf("Checker: KO\n");
+	ft_stack_clear(stack_b);
+	ft_stack_clear(stack_a);
 	return (*stack_a);
 }
 
