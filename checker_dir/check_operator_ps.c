@@ -6,7 +6,7 @@
 /*   By: schamizo <schamizo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:41:17 by schamizo          #+#    #+#             */
-/*   Updated: 2024/02/22 18:27:14 by schamizo         ###   ########.fr       */
+/*   Updated: 2024/03/26 14:36:36 by schamizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,9 @@ void	sb_check(t_stack **stack)
 
 void	ss_check(t_stack **stack_a, t_stack **stack_b)
 {
-	sb_check(stack_b);
-	sa_check(stack_a);
+	if (ft_stack_size(*stack_a) > 1 && ft_stack_size(*stack_b) > 1)
+	{
+		sb_check(stack_b);
+		sa_check(stack_a);
+	}
 }

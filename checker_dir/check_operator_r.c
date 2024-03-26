@@ -6,7 +6,7 @@
 /*   By: schamizo <schamizo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:43:24 by schamizo          #+#    #+#             */
-/*   Updated: 2024/02/22 18:26:57 by schamizo         ###   ########.fr       */
+/*   Updated: 2024/03/26 14:35:55 by schamizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 void	rr_check(t_stack **stack_a, t_stack **stack_b)
 {
-	rotate_check(stack_a);
-	rotate_check(stack_b);
+	if (ft_stack_size(*stack_a) > 1 && ft_stack_size(*stack_b) > 1)
+	{
+		rotate_check(stack_a);
+		rotate_check(stack_b);
+	}
 }
 
 void	rotate_check(t_stack **stack)
@@ -37,8 +40,11 @@ void	rotate_check(t_stack **stack)
 
 void	rrr_check(t_stack **stack_a, t_stack **stack_b)
 {
-	rotate_reverse_check(stack_a);
-	rotate_reverse_check(stack_b);
+	if (ft_stack_size(*stack_a) > 1 && ft_stack_size(*stack_b) > 1)
+	{
+		rotate_reverse_check(stack_a);
+		rotate_reverse_check(stack_b);
+	}
 }
 
 void	rotate_reverse_check(t_stack **stack)
