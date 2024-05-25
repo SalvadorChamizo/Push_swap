@@ -6,7 +6,7 @@
 /*   By: schamizo <schamizo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/17 18:11:57 by schamizo          #+#    #+#             */
-/*   Updated: 2024/03/11 12:17:48 by schamizo         ###   ########.fr       */
+/*   Updated: 2024/05/25 18:18:10 by schamizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,22 +71,15 @@ t_stack	*build_stack_checker(int argc, char **argv, t_stack *stack_a)
 
 t_stack	*do_checker(t_stack **stack_a, t_stack **stack_b, char *operator)
 {
-	int	i;
-
-	i = 0;
 	while (operator)
 	{
 		do_operator(stack_a, stack_b, operator);
 		operator = get_next_line(STDIN_FILENO);
-		i++;
 	}
 	if (is_sorted(stack_a) == 1 && ft_stack_size(*stack_b) == 0)
-	{
-		ft_printf("Checker: OK\n");
-		ft_printf("Moves: %d\n", i);
-	}
+		ft_printf("OK\n");
 	else
-		ft_printf("Checker: KO\n");
+		ft_printf("KO\n");
 	ft_stack_clear(stack_b);
 	ft_stack_clear(stack_a);
 	return (*stack_a);
