@@ -6,7 +6,7 @@
 /*   By: schamizo <schamizo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 11:14:29 by schamizo          #+#    #+#             */
-/*   Updated: 2024/02/16 11:40:39 by schamizo         ###   ########.fr       */
+/*   Updated: 2024/05/25 18:21:18 by schamizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,10 +89,8 @@ void	set_target_position(t_stack *stack_a, t_stack *stack_b)
 {
 	t_stack	*temp_b;
 	int		target_pos;
-	int		i;
 
 	temp_b = stack_b;
-	i = 0;
 	set_position(stack_a);
 	set_position(stack_b);
 	target_pos = 0;
