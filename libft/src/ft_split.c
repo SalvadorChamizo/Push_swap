@@ -6,7 +6,7 @@
 /*   By: schamizo <schamizo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 15:48:56 by schamizo          #+#    #+#             */
-/*   Updated: 2024/01/04 15:39:07 by schamizo         ###   ########.fr       */
+/*   Updated: 2024/05/25 18:19:55 by schamizo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,15 +79,7 @@ static char	**fill_split(char	**str, char const *s, char c)
 char	**ft_split(const char *s, char c)
 {
 	char	**str;
-	size_t	len;
-	size_t	i;
-	size_t	j;
-	int		start;
 
-	len = ft_strlen(s);
-	i = 0;
-	j = 0;
-	start = -1;
 	str = (char **) malloc(sizeof(char *) * (count_words(s, c) + 1));
 	if (str == NULL)
 		return (NULL);
